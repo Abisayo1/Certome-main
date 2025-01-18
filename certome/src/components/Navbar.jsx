@@ -39,7 +39,7 @@ function Navbar() {
 
     return (
         <>
-            <header className="flex shadow-xl relative h-24 text-xl justify-between items-center w-full px-2 sm:px-20 " >
+            <header className="flex shadow-xl relative h-24 text-l justify-between items-center w-full px-2 sm:px-20 " >
 
                 <NavLink to='/home'>
                     <div className="logo w-32 float-start sm:w-40 ">
