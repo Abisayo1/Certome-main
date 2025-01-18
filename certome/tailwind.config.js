@@ -42,6 +42,11 @@ export default {
     
     },
     extend: {
+      fontSize: {
+        'custom-small': '12px',  // Custom small size
+        'custom-medium': '16px', // Custom medium size
+        'custom-large': '20px',  // Custom large size
+      },
       backgroundClip: {
         text: "text",
       },

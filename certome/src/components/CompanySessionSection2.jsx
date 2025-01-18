@@ -1,25 +1,34 @@
-import React from 'react'; // Create a separate CSS file for styling
+import React from 'react';
 
 const CompanySessionSection2 = () => {
   return (
-    <div className="flex flex-col items-center " style={{backgroundImage: "url('./mapx.png')",}}>
+    <div 
+      className="flex flex-col items-center bg-cover bg-center py-10 px-4"
+      style={{ backgroundImage: "url('./mapx.png')" }}
+    >
       {/* Top Images */}
-      <div className="flex flex-col items-center mx-auto gap-5 md:flex-row max-w-[800px] mb-8 w-full justify-between ">
-        <img src="/Rectangle 60.png" alt="Top Left" className="md:w-[48%] w-[90%] rounded-xl " />
-        <img src="/Rectangle 61.png" alt="Top Right" className="md:w-[48%] w-[90%] rounded-xl " />
+      <div className="flex flex-col md:flex-row items-center justify-between gap-5 w-full max-w-4xl mb-8">
+        <img 
+          src="/Rectangle 60.png" 
+          alt="Top Left" 
+          className="w-full md:w-[48%] rounded-xl"
+        />
+        <img 
+          src="/Rectangle 61.png" 
+          alt="Top Right" 
+          className="w-full md:w-[48%] rounded-xl"
+        />
       </div>
-      
 
-      {/* Bottom Image with background */}
-      <div className="flex justify-center items-center  w-full max-w-[90%] lg:max-w-[600px] my-5 "> 
-        <img src="/Rectangle 62.png" alt="Bottom" className="" />
-        
+      {/* Bottom Image */}
+      <div className="w-full max-w-3xl flex justify-center">
+        <img 
+          src="/Rectangle 62.png" 
+          alt="Bottom" 
+          className="w-full rounded-xl"
+        />
       </div>
-      
-
-      
     </div>
-    
   );
 }
 

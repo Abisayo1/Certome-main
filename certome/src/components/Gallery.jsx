@@ -106,7 +106,9 @@ const Gallery = () => {
 
   return (
     <div className=" lg:px-[10%] p-5 mx-auto lg:mx-16 ">
-      <h2 className="text-3xl text-left mb-5 ">Latest Post</h2>
+      <h2 className="text-3xl text-center sm:text-left mb-5">
+  Latest Post
+</h2>
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 ">
         {open ? (
 

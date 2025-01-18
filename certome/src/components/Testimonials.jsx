@@ -8,7 +8,6 @@ import { BiLeftArrowAlt, BiRightArrowAlt, BiSolidStar, BiStar } from 'react-icon
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 
 const Testimonials = () => {
-    
     const Data = [
         { name: "Abisayo FA", role: "Lead Developer", pic: 'imgIcon.jpg' },
         { name: "Abisayo FA", role: "Lead Developer", pic: 'imgIcon.jpg' },
@@ -23,13 +22,16 @@ const Testimonials = () => {
 
     return (
         <div className="px-5">
-            <Swiper
+            
+            <Swiper 
                 spaceBetween={30}
                 centeredSlides={true}
                 loop={true}
                 speed={800}
                 autoplay={{ delay: 3000 }}
-                pagination={{ clickable: true }}
+                pagination={{ 
+                    clickable: true,
+                }}
                 breakpoints={{
                     640: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
@@ -40,6 +42,7 @@ const Testimonials = () => {
                     nextEl: navigationNextRef.current,
                 }}
                 onBeforeInit={(swiper) => {
+                    // Ensure refs are initialized for navigation
                     swiper.params.navigation.prevEl = navigationPrevRef.current
                     swiper.params.navigation.nextEl = navigationNextRef.current
                 }}
@@ -49,9 +52,7 @@ const Testimonials = () => {
                 {Data.map((data, index) => (
                     <SwiperSlide key={index}>
                         <div
-                            className={`shadow-xl transition-transform duration-500 ${
-                                active === index ? 'scale-105' : 'scale-90'
-                            } my-10 rounded-xl bg-[#fafafa] py-10 px-5 max-w-[350px] md:max-w-[400px] mx-auto`}
+                            className={`mb-20 shadow-xl transition-transform duration-500 ${active === index ? 'scale-105' : 'scale-90'} mt-8 my-10 rounded-xl bg-[#fafafa] py-10 px-5 max-w-[350px] md:max-w-[400px] mx-auto`}
                         >
                             <div className="flex items-center my-5">
                                 <div className="w-16 mx-2">
@@ -61,13 +62,6 @@ const Testimonials = () => {
                                     <p className="font-MontserratBold text-xl max-sm:mt-4">{data.name}</p>
                                     <div className="flex text-xl items-center">
                                         <p className="text-lg">{data.role}</p>
-                                        <div className="flex text-web-orange-600 mx-4">
-                                            <BiSolidStar />
-                                            <BiSolidStar />
-                                            <BiSolidStar />
-                                            <BiSolidStar />
-                                            <BiStar />
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -81,13 +75,24 @@ const Testimonials = () => {
                                     omnis laboriosam consectetur.
                                 </div>
                             </div>
+
+                            {/* Stars section */}
+                            <div className="flex justify-center mt-4 stars-container  sm:flex-row">
+                                <div className="flex text-web-orange-600 text-xl">
+                                    <BiSolidStar />
+                                    <BiSolidStar />
+                                    <BiSolidStar />
+                                    <BiSolidStar />
+                                    <BiStar />
+                                </div>
+                            </div>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
 
             {/* Navigation Arrows */}
-            <div className="arrows flex text-2xl justify-between mx-auto my-5 max-w-[300px]">
+            <div className="arrows flex text-2xl justify-between mt-10 mx-auto my-5 max-w-[300px]">
                 <div
                     ref={navigationPrevRef}
                     className="prev-btn p-2 rounded-full bg-gray-300 cursor-pointer hover:bg-gray-400"
@@ -101,6 +106,7 @@ const Testimonials = () => {
                     <BiRightArrowAlt />
                 </div>
             </div>
+            
         </div>
     )
 }

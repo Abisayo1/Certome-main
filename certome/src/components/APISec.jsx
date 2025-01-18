@@ -11,7 +11,7 @@ const APISec = () => {
     { id: 5, imgSrc: 'Standard5.png', title: 'STORMYLINE', subtitle: 'Learn how to integrate Certome with StormyLine' },
     { id: 6, imgSrc: 'Standard6.png', title: 'STORMYLINE', subtitle: 'Learn how to integrate Certome with StormyLine' },
     { id: 7, imgSrc: 'Standard7.png', title: 'STORMYLINE', subtitle: 'Learn how to integrate Certome with StormyLine' },
-    { id: 8, imgSrc: 'Standard8.png', title: 'STORMYLINE', subtitle: 'Learn how to integrate Certome with StormyLine' }, 
+    { id: 8, imgSrc: 'Standard8.png', title: 'STORMYLINE', subtitle: 'Learn how to integrate Certome with StormyLine' },
     { id: 9, imgSrc: 'Standard9.png', title: 'STORMYLINE', subtitle: 'Learn how to integrate Certome with StormyLine' },
     { id: 10, imgSrc: 'Standard10.png', title: 'STORMYLINE', subtitle: 'Learn how to integrate Certome with StormyLine' },
     { id: 11, imgSrc: 'Standard11.png', title: 'STORMYLINE', subtitle: 'Learn how to integrate Certome with StormyLine' },
@@ -22,19 +22,28 @@ const APISec = () => {
   ];
 
   return (
-    <div className=" mt-10 px-[5%] relative mb-40 ">
-      <img src="./badge.png" className='absolute scale-10 -z-[9999] ' alt="" />
-      <div className="flex my-5 ">
-        <span className=' text-xl font-bold mr-2 ' >All Integrations</span>
-        <span className="arrow"><BiChevronRight/> </span> {/* Arrow symbol */}
+    <div className="mt-10 px-[5%] relative mb-40 flex flex-col overflow-hidden">
+      <img src="./badge.png" className="absolute scale-10 -z-[9999]" alt="" />
+      
+      {/* Align the title to the left */}
+      <div className="flex items-center my-5">
+        <span className="max-sm:ml-4 text-xl font-bold">All Integrations</span>
+        <span className="arrow ml-2">
+          <BiChevronRight />
+        </span>
       </div>
 
-      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5 ">
-        {STORMYLINEs.map(STORMYLINE => (
-          <div key={STORMYLINE.id} className="">
-            <img src={STORMYLINE.imgSrc} alt={STORMYLINE.title} className="api-item-image" />
-            <span className='text-xl block  my-4 '>{STORMYLINE.title}</span>
-            <span className='text-lg block font-MontserratBold '>{STORMYLINE.subtitle}</span>
+      {/* Center the grid content */}
+      <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5 justify-center">
+        {STORMYLINEs.map((STORMYLINE) => (
+          <div key={STORMYLINE.id} className="text-center">
+            <img
+              src={STORMYLINE.imgSrc}
+              alt={STORMYLINE.title}
+              className="api-item-image mx-auto"
+            />
+            <span className="text-xl block my-4">{STORMYLINE.title}</span>
+            <span className="text-lg block font-MontserratBold">{STORMYLINE.subtitle}</span>
           </div>
         ))}
       </div>
