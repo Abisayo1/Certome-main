@@ -8,11 +8,12 @@ import { BiLeftArrowAlt, BiRightArrowAlt, BiSolidStar, BiStar } from 'react-icon
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 
 const Testimonials = () => {
+    
     const Data = [
         { name: "Abisayo FA", role: "Lead Developer", pic: 'imgIcon.jpg' },
-        { name: "Abisayo FA", role: "Software Developer", pic: 'imgIcon.jpg' },
-        { name: "Abisayo FA", role: "Project Manager", pic: 'imgIcon.jpg' },
-        { name: "Abisayo FA", role: "Senior Developer", pic: 'imgIcon.jpg' },
+        { name: "Abisayo FA", role: "Lead Developer", pic: 'imgIcon.jpg' },
+        { name: "Abisayo FA", role: "Lead Developer", pic: 'imgIcon.jpg' },
+        { name: "Abisayo FA", role: "Lead Developer", pic: 'imgIcon.jpg' },
     ]
 
     // Refs for navigation buttons
@@ -57,7 +58,7 @@ const Testimonials = () => {
                                     <img className="rounded-full" src={data.pic} alt="" />
                                 </div>
                                 <div>
-                                    <p className="font-MontserratBold text-xl">{data.name}</p>
+                                    <p className="font-MontserratBold text-xl max-sm:mt-4">{data.name}</p>
                                     <div className="flex text-xl items-center">
                                         <p className="text-lg">{data.role}</p>
                                         <div className="flex text-web-orange-600 mx-4">
