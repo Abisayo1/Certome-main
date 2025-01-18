@@ -10,7 +10,7 @@ const CustomLayout = () => {
                 </div>
 
                 <div className="text-left ">
-                    <button className="bg-primary text-white px-16 py-3 rounded-lg my-5 ">Download</button>
+                    <button className="bg-primary max-sm:ml-20 text-white px-16 py-3 rounded-lg my-5 ">Download</button>
                 </div>
             </div>
 

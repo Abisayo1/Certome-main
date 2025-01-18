@@ -8,14 +8,26 @@ const BlogHeader = () => {
             <h1 className="text-2xl sm:text-4xl font-MontserratBold text-primary mb-5 text-left ">Trending Topics</h1>
 
             {/* Buttons */}
-            <div className="flex flex-row justify-start items-center overflow-x-auto gap-3 mb-5 ">
-                <button className=" outline-none py-3 px-5 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-[0.3] focus:text-white focus:font-semibold focus:bg-[blue] ">All</button>
-                <button className="outline-none py-3 px-5 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-[0.3] focus:text-white focus:font-semibold focus:bg-[blue] min-w-[200px] ">Design Thinking</button>
-                <button className="outline-none py-3 px-5 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-[0.3] focus:text-white focus:font-semibold focus:bg-[blue] ">Technology</button>
-                <button className="outline-none py-3 px-5 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-[0.3] focus:text-white focus:font-semibold focus:bg-[blue] ">Web3</button>
-                <button className="outline-none py-3 px-5 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-[0.3] focus:text-white focus:font-semibold focus:bg-[blue] ">Programming</button>
-                <button className="outline-none py-3 px-5 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-[0.3] focus:text-white focus:font-semibold focus:bg-[blue] ">AI</button>
-            </div>
+            <div className="flex flex-wrap justify-start items-center overflow-x-auto gap-3 mb-5 max-w-full">
+  <button className="outline-none py-2 px-4 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-300 focus:text-white focus:font-semibold focus:bg-blue-500">
+    All
+  </button>
+  <button className="outline-none py-2 px-4 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-300 focus:text-white focus:font-semibold focus:bg-blue-500 min-w-[150px] sm:min-w-[200px]">
+    Design Thinking
+  </button>
+  <button className="outline-none py-2 px-4 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-300 focus:text-white focus:font-semibold focus:bg-blue-500">
+    Technology
+  </button>
+  <button className="outline-none py-2 px-4 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-300 focus:text-white focus:font-semibold focus:bg-blue-500">
+    Web3
+  </button>
+  <button className="outline-none py-2 px-4 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-300 focus:text-white focus:font-semibold focus:bg-blue-500">
+    Programming
+  </button>
+  <button className="outline-none py-2 px-4 rounded-3xl bg-white border-2 border-[#797979] cursor-pointer duration-300 focus:text-white focus:font-semibold focus:bg-blue-500">
+    AI
+  </button>
+</div>
 
 
             <div className='h-[80vh]' > {/*focus Image */}
@@ -24,7 +36,7 @@ const BlogHeader = () => {
                     <img src="Hero.png" alt="Hero" className="w-full h-full object-cover rounded-3xl " />
 
                     {/* Card */}
-                    <div className="sm:absolute  mt-3 sm:mt-0 -bottom-14 bg-white left-5 sm:px-10 p-5 sm:pt-10 rounded-xl shadow-xl justify-start ">
+                    <div className="sm:absolute  mt-3 max-sm:-mt-40 max-sm:mr-10 sm:mt-0 -bottom-14 bg-white left-5 sm:px-10 p-5 sm:pt-10 rounded-xl shadow-xl justify-start ">
                         <button className="bg-[blue] text-white border-none outline-none py-2 px-3 text-sm rounded-lg cursor-pointer mb-3 flex ">Technology</button>
                         <h2 className=" text-[1em] sm:text-lg mb-3 max-w-[500px] ">The Impact of Technology on the Workplace: How Technology is Changing</h2>
                         <div className="flex flex-row items-center mt-3">
