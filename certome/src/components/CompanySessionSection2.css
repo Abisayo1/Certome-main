@@ -1,0 +1,90 @@
+.company-session-section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px;
+    margin-bottom: 300px;
+    background-image: url('/mapx.png');
+    background-position: bottom;
+
+  }
+  
+  .top-images-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+  }
+  
+  .top-image {
+    width: 48%;
+    border-radius: 15px; /* Rounded corners for top images */
+  }
+  
+  .bottom-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  
+  .bottom-image {
+    width: 100%;
+    border-radius: 15px; /* Rounded corners for bottom image */
+    z-index: 1;
+  }
+  
+  .left-background,
+  .right-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-bottom: 300px;
+    width: 100px; /* Adjust as needed */
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: 0; /* Behind the bottom image */
+  }
+  
+  .left-background {
+    left: -120px; /* Move to the left */
+    background-image: url('/map-1.png');
+  }
+  
+  .right-background {
+    right: -120px; /* Move to the right */
+    background-image: url('/mapx');
+  }
+  
+  /* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .company-session-section2 {
+      margin-top: 0;
+      margin-bottom: 100px;
+      background-position: bottom center;
+      padding: 15px;
+    }
+  
+    .top-images-container {
+      flex-direction: column; /* Stack images vertically */
+      align-items: center;
+    }
+  
+    .top-image {
+      width: 90%; /* Adjust image width to be full-width on mobile */
+      margin-bottom: 20px; /* Add some space between stacked images */
+    }
+  
+    .bottom-image-container {
+      max-width: 90%;
+    }
+  
+    .left-background,
+    .right-background {
+      display: none; /* Hide background images on mobile for cleaner layout */
+    }
+  }

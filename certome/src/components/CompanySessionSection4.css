@@ -1,0 +1,158 @@
+.company-session-section4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+p {
+  margin-top: 30px;
+}
+
+.redstar {
+width: 10%;
+height: auto;
+margin-top: -150px;
+}
+
+.blueZigZag {
+width: 100px;
+height: auto;
+margin-left: 10px;
+}
+
+.card {
+  display: flex;
+  background-color: #F3F4F6;
+  /* Card background color */
+  padding: 20px;
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 20px;
+}
+
+.right-column {
+  margin-top: 20px;
+  flex: 1;
+  position: relative;
+}
+
+.right-image {
+  width: 100%;
+  border-radius: 10px;
+  
+}
+
+.left-column h2 {
+  font-size: 2rem;
+  color: #181A2A;
+  margin-bottom: 15px;
+}
+
+.left-column p {
+  font-size: 1.2rem;
+  color: #181A2A;
+}
+
+.left-background,
+.right-background {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.left-background-1 {
+  top: -30px;
+  left: -40px;
+  width: 100px;
+  height: 100px;
+  background-image: url('/path/to/left-background-1.png');
+}
+
+.left-background-2 {
+  bottom: -40px;
+  left: -50px;
+  width: 120px;
+  height: 120px;
+  background-image: url('/path/to/left-background-2.png');
+}
+
+.right-background-1 {
+  top: -30px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  background-image: url('/path/to/right-background-1.png');
+}
+
+.right-background-2 {
+  bottom: -40px;
+  right: -50px;
+  width: 120px;
+  height: 120px;
+  background-image: url('/path/to/right-background-2.png');
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column {
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .right-column,
+  .left-column {
+    width: 100%;
+  }
+}
+
+/* Mobile-Specific Media Query */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ensure image comes first */
+  .right-column {
+    order: -1; /* Bring the image before the text */
+    margin-bottom: 170px;
+    width: 100%;
+  }
+
+  .right-image {
+    width: 100%; /* Ensure the image is full width on mobile */
+    border-radius: 10px;
+  }
+
+  .left-column {
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .left-column h2 {
+    font-size: 1.8rem; /* Adjust the font size for mobile */
+  }
+
+  .left-column p {
+    font-size: 1rem; /* Adjust the font size for mobile */
+  }
+}

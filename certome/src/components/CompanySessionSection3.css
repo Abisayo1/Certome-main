@@ -1,0 +1,96 @@
+.company-session-section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -200px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .columns-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+  }
+  
+  .column {
+    width: 48%; /* Each column takes up 48% of the width */
+  }
+  
+  .column h2 {
+    font-size: 2rem;
+    color: #181A2A;
+    margin-bottom: 15px;
+  }
+  
+  .column p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .image-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: -720px;
+  }
+  
+  .rectangular-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+    content: url('/LogoClouds.png'); /* Mobile image */
+  }
+
+  
+  /* Tablet (up to 1024px) */
+@media (max-width: 1024px) {
+    .columns-container {
+      flex-direction: column; /* Stack the columns on smaller screens */
+      align-items: center;
+    }
+  
+    .column {
+      width: 90%; /* Make each column full width on smaller screens */
+      margin-bottom: 20px; /* Add some spacing between stacked columns */
+    }
+  
+    .rectangular-image {
+      width: 90%; /* Ensure the image scales down on smaller screens */
+    }
+  }
+  
+  /* Mobile (up to 767px) */
+  @media (max-width: 767px) {
+    .company-session-section3 {
+        
+        margin-top: -90px;        
+      }
+
+    .column h2 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+  
+    .column p {
+      font-size: 1rem; /* Adjust paragraph size */
+    }
+  
+    .rectangular-image {
+      width: 100%; /* Ensure full width for the image on mobile */
+    }
+
+    .image-container {
+        margin-top: -200px;
+    
+      }
+
+      .rectangular-image {
+        content: url('/Logo Clouds 01.png'); /* Mobile image */
+        background-size: cover;
+        background-position: center;
+      }
+  }
+  

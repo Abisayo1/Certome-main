@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+
+@layer base {
+  @font-face {
+    font-family: "Montserrat";
+    src: url(./Fonts/Montserrat-Regular.ttf)
+  }
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url(./Fonts/Montserrat-Bold.ttf)
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;    
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Montserrat';
+  
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.style-btn{
+  /*width: 50%;*/ /*adjust the width in tailwind css*/
+  background-color: #060660;
+  background-size: 200% 100%;
+  padding: 12px 0;
+  border-radius: 25px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 28px;
+  background-image: linear-gradient(to right, #0f347e 50%, #060660 50%   );
+  color: white;
+  cursor: pointer;
+  background-position: 100% 0 ;
+  font-weight: 600;
+  transition: background-position 0.5s ease;
+}
+.style-btn:hover{
+  background-position: 0% 0;
+}
+.style-btn-inner{
+  /*width: 50%;*/ /*adjust the width in tailwind css*/
+  background-color: #ffffff;
+  background-size: 200% 100%;
+  padding: 12px 0;
+  border-radius: 25px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 20px;
+  border: solid 2px #060660;
+  line-height: 28px;
+  background-image: linear-gradient(to right, #060660 50%, #ffffff 50%  );
+  cursor: pointer;
+  background-position: 100% 0 ;
+  font-weight: 600;
+  transition: background-position 0.5s ease;
+}
+
+.style-btn-inner:hover{
+  background-position: 0% 0;
+  color: #ffffff;
+}
+
+.gradient-text {
+  background: linear-gradient(93.93deg, #E01066 4.77%, #060660 40.89%, #0C0CC6 62.56%);
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+  background-clip: text; /* For non-webkit browsers */
+  color: transparent; /* Ensure text is transparent to only show the gradient */
+  /* Optional: Center text alignment */
+}
+
+
+
+
+
+.container .nav-link li {
+  list-style: none;
+  margin: 0 0.5rem;
+}
+
+.container .nav-link {
+  display: flex;
+
+}
+
+
+.content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.content h2 {
+  font-size: 6rem;
+  color: #fff;
+}
+
+.icon{
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+  /* Style specifically for the 'Book a Demo' link */
+  .nav-link li a.book-demo {
+    background-color: #060660; /* Dark blue background */
+    color: #ffffff; /* White text */
+    font-size: 1.3rem;
+    padding: 0.7rem 1rem;
+    display: block;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  }
+  
+  .nav-link li a.book-demo:hover {
+    background-color: #0044cc; /* Lighter blue on hover */
+    color: #ffffff; /* Keep text white */
+  }
+
+@media(max-width: 768px){
+  .content h2{
+    font-size: 4rem;
+    text-align: center;
+  }
+
+
+  .icon{
+    display: block;
+  }
+
+  .container .nav-link {
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+    position: absolute;
+    width: 350;
+    height: 60vh;
+    top: -800px;
+    right: 0;
+    z-index: 10;
+    transition: all 0.3s
+  }
+
+  .nav-link.active{
+    top: 15%;
+    transition: all 0.3s ease-in;
+
+
+  }
+
+}
+

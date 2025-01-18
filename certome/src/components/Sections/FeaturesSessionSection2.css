@@ -1,0 +1,186 @@
+.features-session-section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #ffffff;
+  }
+  
+  .cardss {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    
+    
+  }
+  
+  .cardss h1 {
+    font-size: 2rem;
+    color: #060660;
+    margin-bottom: -30px;
+    margin-left: 120px;
+  }
+  
+  .cardss p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-left: 70px;
+    margin-bottom: -50px;
+  }
+  
+  /* Flex container for the two columnsss */
+  .cardss-content {
+    left: 0s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 150px;
+    gap: 20px;
+    margin-top: 20px; /* Added margin for spacing beneath the paragraph */
+  }
+  
+  /* Left columnss (Numbered List) */
+  .left-columnss {
+    margin-top: 70px;
+    flex: 1;
+  }
+  
+  .numbered-list {
+    list-style: none; /* Remove default list styling */
+    padding-left: 0;
+  }
+  
+  .list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer; /* Make list items clickable */
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #060660;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+  
+  .item-text {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Description box that appears on hover */
+  .description {
+    position: absolute;
+    top: 50%;
+    left: 150px; /* Adjust positioning relative to the circle and text */
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the description */
+    white-space: nowrap; /* Prevents text from wrapping */
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #333;
+    font-size: 0.9rem;
+    display: none; /* Initially hidden */
+  }
+  
+  .list-item:hover .description {
+    display: block; /* Show on hover */
+  }
+  
+  /* Right columnss (Image) */
+  .right-columnss {
+    margin-top: -160px;
+    flex: 1;
+    margin-left: -250px;
+    
+  }
+  
+  .image {
+    width: 400px;
+    height: auto;
+
+
+  }
+
+  /* Media query for mobile devices */
+@media (max-width: 768px) {
+  .features-session-section2 {
+    padding: 20px; /* Reduce padding on mobile */
+  }
+
+  .cardss {
+    padding: 20px; /* Reduce padding on mobile */
+    box-shadow: none; /* Optional: remove shadow for a simpler look */
+  }
+
+  .cardss h1 {
+    font-size: 1.5rem; /* Decrease font size */
+    margin-left: 0; /* Center heading */
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .cardss p {
+    font-size: 1rem; /* Decrease font size */
+    margin-left: 0; /* Remove margin on mobile */
+    text-align: center; /* Center text */
+  }
+
+  .cardss-content {
+    flex-direction: column; /* Stack content vertically */
+    margin-left: 0; /* Remove left margin */
+    gap: 20px;
+  }
+
+  .left-columnss {
+    margin-top: 60px; /* Adjust top margin for mobile */
+    flex: none; /* Remove flex shrink/grow */
+  }
+
+  .right-columnss {
+    margin-top: 30px; /* Adjust top margin */
+    margin-bottom: 70px;
+    flex: none; /* Remove flex */
+    margin-right: -200px /* Remove right margin */
+  }
+
+  .image {
+    width: 100%; /* Make image responsive */
+    height: auto;
+  }
+
+  .list-item {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: flex-start; /* Align text to the left */
+  }
+
+  .circle {
+    margin-right: 10px; /* Reduce space between circle and text */
+  }
+
+  .description {
+    left: 50px; /* Adjust description box position on mobile */
+    white-space: normal; /* Allow text wrapping */
+    width: 100px; /* Set a max width for the description box */
+  }
+}
+
+
+
+
+  
+  
