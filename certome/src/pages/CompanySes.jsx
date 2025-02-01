@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 
 const CompanySes = () => {
   return (
-    <div className='container'>
+    <div>
       <CompanySesHead />
       <CompanySessionSection2/>
       <CompanySessionSection3/>
