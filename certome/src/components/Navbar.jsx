@@ -18,7 +18,9 @@ function Navbar() {
                 { name: 'Company', route: '/CompanySes' },
                 { name: 'FAQs', route: '/FAQ' },
                 { name: 'API Integration', route: '/APISection' },
-                { name: 'Tutorial', route: '/tutorial' }]
+                { name: 'Tutorial', route: '/tutorial' },
+                {name: 'Career', route: '/Career'}
+            ]
         },
         {
             name: 'Industries', route: '/Industries',

@@ -22,20 +22,23 @@ const Testimonials = () => {
 
     return (
         <div className="px-5">
-            
-            <Swiper 
-                spaceBetween={30}
+
+            <Swiper
                 centeredSlides={true}
                 loop={true}
                 speed={800}
                 autoplay={{ delay: 3000 }}
-                pagination={{ 
+                pagination={{
                     clickable: true,
                 }}
                 breakpoints={{
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
+                    640: {
+                        
+                        spaceBetween: 30,
+                        slidesPerView: 1,
+                    },
+                    768: { slidesPerView: 2, spaceBetween: -70 },
+                    1024: { slidesPerView: 3, spaceBetween: -70 },
                 }}
                 navigation={{
                     prevEl: navigationPrevRef.current,
@@ -52,7 +55,7 @@ const Testimonials = () => {
                 {Data.map((data, index) => (
                     <SwiperSlide key={index}>
                         <div
-                            className={`mb-20 shadow-xl transition-transform duration-500 ${active === index ? 'scale-105' : 'scale-90'} mt-8 my-10 rounded-xl bg-[#fafafa] py-10 px-5 max-w-[350px] md:max-w-[400px] mx-auto`}
+                            className={`mb-20 shadow-xl transition-transform duration-500 ${active === index ? 'scale-105' : 'scale-90'} mt-8 my-10 rounded-xl bg-[#fafafa] py-10 px-5 max-w-[350px] md:max-w-[350px] mx-auto`}
                         >
                             <div className="flex items-center my-5">
                                 <div className="w-16 mx-2">
@@ -106,7 +109,7 @@ const Testimonials = () => {
                     <BiRightArrowAlt />
                 </div>
             </div>
-            
+
         </div>
     )
 }

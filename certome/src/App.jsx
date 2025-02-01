@@ -9,6 +9,7 @@ import APISection from './pages/APISection'
 import FeaturesSession from './pages/FeaturesSession'
 import Pricing from './pages/Pricing'
 import Industries from './pages/Industries'
+import Career from './pages/Career'
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/Career" element={<Career />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/CompanySes" element={<CompanySes />} />
           <Route path="/FAQ" element={<FAQ />} />

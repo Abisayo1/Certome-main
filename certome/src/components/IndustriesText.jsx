@@ -43,7 +43,7 @@ const IndustriesText = () => {
               <div className="flex flex-1 justify-center ">
                 <img src={item.image} alt={`Industry ${index + 1}`} className="max-w-[100%] " />
               </div>
-              <div className="flex-1 sm:mx-5 text-center my-5 -mt-10 ">
+              <div className="flex-1 sm:mx-10 text-center my-5 -mt-10 ">
                 <h3 className="text-3xl font-MontserratBold my-5 mt-10 ">{item.title}</h3>
                 <p className="text-xl text-left " style={{ color: '#000' }}>{item.description}</p>
               </div>

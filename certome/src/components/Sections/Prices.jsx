@@ -12,9 +12,9 @@ const Prices = () => {
   ]
 
   return (
-    <div className="grid justify-center lg:grid-cols-2 my-6 mx-[20%] gap-10 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 my-6 mx-4 md:mx-12 py-16 lg:mx-44 justify-center">
       {Plans.map((data,index) => (
-        <div className=' first:bg-[#e010660d] bg-[#467eff0d] last:bg-[#89eb670d] shadow-lg  w-72 p-5 ' key={index}>
+        <div className=' first:bg-[#e010660d] bg-[#467eff0d] last:bg-[#89eb670d] shadow-lg max-lg:mx-auto max-lg:w-64 w-96 p-5 ' key={index}>
           <div className=' text-xl font-MontserratBold ' >{data.name}</div>
           <div className='text-sm' >{data.description}</div>
           <div className='my-4 text-sm ' ><span className='text-5xl mr-2  font-MontserratBold  ' >${data.price}</span>USD/monthly</div>
